@@ -10,7 +10,12 @@ class Sorteador extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Text('Olá Mundo'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Sorteador'),
+        ),
+        body: Text('Conteúdo'),
+      ),
     );
   }
 }
