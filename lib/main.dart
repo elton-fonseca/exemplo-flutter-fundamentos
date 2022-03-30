@@ -38,15 +38,25 @@ class _PaginaInicialState extends State<PaginaInicial> {
       body: Center(
         child: Column(
           children: [
-            Text('Número sorteado'),
+            Text(
+              'Número sorteado',
+              style: TextStyle(fontSize: 40),
+            ),
             Text(
               _numeroSorteado != 0
                   ? '$_numeroSorteado'
                   : 'Aperte o botão para sortear',
+              style: TextStyle(
+                fontSize: 30,
+                color: Colors.red,
+              ),
             ),
             RaisedButton(
               onPressed: () => {_sortear()},
-              child: Text('Sortear'),
+              child: Text(
+                'Sortear',
+                style: TextStyle(fontSize: 40),
+              ),
             ),
           ],
         ),
