@@ -38,17 +38,26 @@ class _PaginaInicialState extends State<PaginaInicial> {
       body: Center(
         child: Column(
           children: [
-            Text(
-              'Número sorteado',
-              style: TextStyle(fontSize: 40),
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Text(
+                'Número sorteado',
+                style: TextStyle(fontSize: 40),
+              ),
             ),
-            Text(
-              _numeroSorteado != 0
-                  ? '$_numeroSorteado'
-                  : 'Aperte o botão para sortear',
-              style: TextStyle(
-                fontSize: 30,
-                color: Colors.red,
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 30,
+                bottom: 30,
+              ),
+              child: Text(
+                _numeroSorteado != 0
+                    ? '$_numeroSorteado'
+                    : 'Aperte o botão para sortear',
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.red,
+                ),
               ),
             ),
             RaisedButton(
