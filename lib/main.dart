@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,6 +21,14 @@ class PaginaInicial extends StatefulWidget {
 }
 
 class _PaginaInicialState extends State<PaginaInicial> {
+  int _numeroSorteado = 0;
+
+  void _sortear() {
+    setState(() {
+      _numeroSorteado = 1 + Random().nextInt(10 - 1);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,9 +38,13 @@ class _PaginaInicialState extends State<PaginaInicial> {
       body: Column(
         children: [
           Text('Número sorteado'),
-          Text('Aperte o botão para sortear'),
+          Text(
+            _numeroSorteado != 0
+                ? '$_numeroSorteado'
+                : 'Aperte o botão para sortear',
+          ),
           RaisedButton(
-            onPressed: () => {print('Clicou no botão')},
+            onPressed: () => {_sortear()},
             child: Text('Sortear'),
           ),
         ],
