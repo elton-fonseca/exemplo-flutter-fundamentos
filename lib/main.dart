@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +12,16 @@ class Sorteador extends StatelessWidget {
         appBar: AppBar(
           title: Text('Sorteador'),
         ),
-        body: Text('Conteúdo'),
+        body: Column(
+          children: [
+            Text('Número sorteado'),
+            Text('Aperte o botão para sortear'),
+            RaisedButton(
+              onPressed: () => {},
+              child: Text('Sortear'),
+            ),
+          ],
+        ),
       ),
     );
   }
