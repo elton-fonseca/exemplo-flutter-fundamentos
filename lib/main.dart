@@ -35,19 +35,21 @@ class _PaginaInicialState extends State<PaginaInicial> {
       appBar: AppBar(
         title: Text('Sorteador'),
       ),
-      body: Column(
-        children: [
-          Text('Número sorteado'),
-          Text(
-            _numeroSorteado != 0
-                ? '$_numeroSorteado'
-                : 'Aperte o botão para sortear',
-          ),
-          RaisedButton(
-            onPressed: () => {_sortear()},
-            child: Text('Sortear'),
-          ),
-        ],
+      body: Center(
+        child: Column(
+          children: [
+            Text('Número sorteado'),
+            Text(
+              _numeroSorteado != 0
+                  ? '$_numeroSorteado'
+                  : 'Aperte o botão para sortear',
+            ),
+            RaisedButton(
+              onPressed: () => {_sortear()},
+              child: Text('Sortear'),
+            ),
+          ],
+        ),
       ),
     );
   }
