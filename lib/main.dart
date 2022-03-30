@@ -17,7 +17,7 @@ class Sorteador extends StatelessWidget {
             Text('Número sorteado'),
             Text('Aperte o botão para sortear'),
             RaisedButton(
-              onPressed: () => {},
+              onPressed: () => {print('Clicou no botão')},
               child: Text('Sortear'),
             ),
           ],
